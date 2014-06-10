@@ -2,7 +2,7 @@ require_relative 'contact'
 require 'sinatra'
 require_relative 'rolodex'
 
-# @@rolodex = Rolodex.new
+@@rolodex = Rolodex.new
 
 get '/' do
 	@crm_app_name = "Hoostin CRM"
@@ -11,11 +11,11 @@ end
 
 #View all contacts
 get '/contacts' do
-	@contacts=[]
-	@contacts << Contact.new("Julie", "Hache", "julie@bitmaerlabs.com", "instructor")
-	@contacts << Contact.new("Justin", "Podur", "justin@podu.org", "student")
-	@contacts << Contact.new("Sample", "Guy", "sample@guy.com", "another one")
-	@contacts << Contact.new("Sample2", "Gal", "sample2@gal.com", "yet another")
+	# @contacts=[]
+	# @contacts << Contact.new("Julie", "Hache", "julie@bitmaerlabs.com", "instructor")
+	# @contacts << Contact.new("Justin", "Podur", "justin@podu.org", "student")
+	# @contacts << Contact.new("Sample", "Guy", "sample@guy.com", "another one")
+	# @contacts << Contact.new("Sample2", "Gal", "sample2@gal.com", "yet another")
 	erb :contacts
 end
 
