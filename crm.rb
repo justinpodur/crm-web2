@@ -11,22 +11,19 @@ end
 
 #View all contacts
 get '/contacts' do
-	# @contacts=[]
-	# @contacts << Contact.new("Julie", "Hache", "julie@bitmaerlabs.com", "instructor")
-	# @contacts << Contact.new("Justin", "Podur", "justin@podu.org", "student")
-	# @contacts << Contact.new("Sample", "Guy", "sample@guy.com", "another one")
-	# @contacts << Contact.new("Sample2", "Gal", "sample2@gal.com", "yet another")
 	erb :contacts
 end
 
-# post '/contacts' do
-# 	contact = Contact.new(params[:first_name], params[:last_name], params[:email], params[:note])
-# 	@@rolodex.add_contact[contact]
-# end
+post '/contacts' do
+ 	new_contact = Contact.new(params[:first_name], params[:last_name], params[:email], params[:note])
+ 	@@rolodex.add_contact(new_contact)
+ 	redirect to('/contacts')
+end
 
 
 #Add new contact
 get '/contacts/new' do
+	erb :new_contact
 end
 
 #Edit a contact
