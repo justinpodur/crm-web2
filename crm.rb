@@ -1,4 +1,5 @@
 require 'sinatra'
+require relative 'contact'
 
 get '/' do
 	@crm_app_name = "Hoostin CRM"
