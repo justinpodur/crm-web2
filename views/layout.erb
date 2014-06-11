@@ -4,6 +4,21 @@
   <title>Customer Relationship Manager</title>
   </head>
   <body>
+  	<header>
+  		<h1>Welcome to <%= @crm_app_name %></h1>
+  	</header>
+  	<nav>
+  		<ul>
+  			<li><a href="/contacts">View all contacts</a></li>
+  			<li><a href="/contacts/new">Add new contacts</a></li>
+  			<!-- still need to do specific contacts... serve lists, etc.-->
+  		</ul>
+
+  	</nav>
+
     <%= yield %>
+    <footer>
+    	<h4>Thank you for using the CRM</h4>
+    </footer>
   </body>
 </html>
