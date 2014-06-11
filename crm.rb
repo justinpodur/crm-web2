@@ -3,9 +3,9 @@ require 'sinatra'
 require_relative 'rolodex'
 
 @@rolodex = Rolodex.new
+CRM_APP_NAME = "Hoostin CRM"
 
 get '/' do
-	@crm_app_name = "Hoostin CRM"
 	erb :index
 end
 

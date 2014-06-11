@@ -6,7 +6,7 @@
   </head>
   <body>
   	<header>
-  		<h1>Welcome to <%= @crm_app_name %></h1>
+  		<h1>Welcome to <%= CRM_APP_NAME %></h1>
   	</header>
   	<nav>
   		<ul>
@@ -16,10 +16,12 @@
   			<li><a href="/contacts/:id">View a contact</a></li>
   			<li><a href="/contacts/:id/delete">Delete a contact</a></li>
   		</ul>
-
   	</nav>
     <%= yield %>
     <footer>
+      <br>
+      <br>
+      <br>
       <h4>Thank you for using the CRM</h4>
     </footer>
   </body>
