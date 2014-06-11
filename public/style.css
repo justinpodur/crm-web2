@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-family: "Courier New";
+	font-size: 36px;
+	text-align: center;
+	background-color: white;
+}
+
+body {
+	background-color:#FFFFCC;
+}
+
+nav ul {
+	text-align: center;
+	padding: 16px 0;
+	margin: 0;
+	list-style: none;
+}
+
+nav ul li {
+	display: inline;
+	margin-left: 60px;
+}
+
+nav ul li: first-of-type {
+	margin-left: 0;
+}
+
+footer {
+	text-align: center;
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <link rel="stylesheet" type="text/css" href="/style.css">
   <title>Customer Relationship Manager</title>
   </head>
   <body>
@@ -12,15 +13,14 @@
   			<li><a href="/contacts">View all contacts</a></li>
   			<li><a href="/contacts/new">Add new contacts</a></li>
   			<li><a href="/contacts/:id/edit">Edit a contact</a></li>
-  			<li><a href="/contacts/:id/view">View a contact</a></li>
+  			<li><a href="/contacts/:id">View a contact</a></li>
   			<li><a href="/contacts/:id/delete">Delete a contact</a></li>
   		</ul>
 
   	</nav>
-
     <%= yield %>
     <footer>
-    	<h4>Thank you for using the CRM</h4>
+      <h4>Thank you for using the CRM</h4>
     </footer>
   </body>
 </html>
