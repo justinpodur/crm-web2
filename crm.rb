@@ -28,10 +28,17 @@ end
 
 #Edit a contact
 get '/contacts/:id/edit' do
+	erb :edit_contact
 end
 
 #View a contact
 get '/contacts/:id' do
+	erb :view_contact
+end
+
+#Delete a contact
+get '/contacts/:id/delete' do
+	erb :delete_contact
 end
 
 get '/:name' do
