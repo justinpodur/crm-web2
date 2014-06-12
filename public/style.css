@@ -4,6 +4,14 @@
 	font-family: "Courier New";
 }
 
+form {
+	display: inline;
+}
+
+input {
+	display: inline;
+}
+
 h1 {
 	font-size: 36px;
 }
@@ -13,7 +21,12 @@ body {
 	background-color: white;
 }
 
+nav {
+	display: inline;
+}
+
 nav ul {
+	display: inline;
 	float: left;
 	padding: 16px 0;
 	margin: 0;
