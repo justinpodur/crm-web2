@@ -1,11 +1,15 @@
 require_relative 'contact'
-require 'sinatra'
 require_relative 'rolodex'
+
+require 'sinatra'
+require 'data_mapper'
+
+DataMapper.setup(:default, "sqlite3:database.sqlite3")
 
 @@rolodex = Rolodex.new
 
 # Temporary fake data so that we always find contact with id 1000.
-@@rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
+#@@rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
 
 
 CRM_APP_NAME = "Hoostin CRM"
