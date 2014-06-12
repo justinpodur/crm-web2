@@ -65,8 +65,15 @@ put "/contacts/:id" do
 end
 
 #Delete a contact
-get '/contacts/:id/delete' do
-	erb :delete_contact
+delete '/contacts/:id' do
+	@contact = @@rolodex.find_contact(params[:id].to_i)
+	if @contact
+		@@rolodex.delete_contact(@contact.id)
+
+		redirect to ("/contacts")
+	else
+		raise Sinatra::NotFound
+	end
 end
 
 get '/:name' do
