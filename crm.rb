@@ -31,6 +31,11 @@ get '/contacts/new' do
 	erb :new_contact
 end
 
+get "/contacts/1000" do
+  @contact = @@rolodex.find_contact(1000)
+  erb :show_contact
+end
+
 #Edit a contact
 get '/contacts/:id/edit' do
 	erb :edit_contact
@@ -39,11 +44,6 @@ end
 #View a contact
 get '/contacts/:id' do
 	erb :view_contact
-end
-
-get "/contacts/1000" do
-  @contact = @@rolodex.find(1000)
-  erb :show_contact
 end
 
 #Delete a contact
